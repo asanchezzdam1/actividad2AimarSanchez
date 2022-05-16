@@ -8,9 +8,9 @@ package ende;
 public class Juego 
 {
 
-    public static final String PIEDRA = "piedra";
-    public static final String PAPEL = "papel";
-    public static final String TIJERAS = "tijeras";
+    private static final String PIEDRA = "piedra";
+    private static final String PAPEL = "papel";
+    private static final String TIJERAS = "tijeras";
 
     public static void main(String args[])
     {
@@ -84,9 +84,9 @@ public class Juego
  */
 class Jugador{
 
-    public static final String PIEDRA = "piedra";
-    public static final String PAPEL = "papel";
-    public static final String TIJERAS = "tijeras";
+    private static final String PIEDRA = "piedra";
+    private static final String PAPEL = "papel";
+    private static final String TIJERAS = "tijeras";
 
     /**
      * Escoge piedra, papel o tijera al azar
