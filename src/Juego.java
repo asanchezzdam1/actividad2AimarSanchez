@@ -9,6 +9,7 @@ public class Juego
 {
 
     public static final String PIEDRA = "piedra";
+    public static final String PAPEL = "papel";
 
     public static void main(String args[])
     {
@@ -31,18 +32,18 @@ public class Juego
             opcion_JUGADOR2 = p2.opcion_al_azar();
             System.out.println("Jugador 2: " + opcion_JUGADOR2+"\t Jugador 2 - Partidas ganadas: " + EXITOS_jugador2);
             
-            if((opcion_JUGADOR1.equals("piedra"))&&(opcion_JUGADOR2.equals("papel")))
+            if((opcion_JUGADOR1.equals(PIEDRA))&&(opcion_JUGADOR2.equals(PAPEL)))
             {
                 System.out.println("Jugador 2 GANA");
                 EXITOS_jugador2 = ++p2.éxitos;
                 
             }
-            else if((opcion_JUGADOR1.equals("papel"))&&(opcion_JUGADOR2.equals("piedra")))
+            else if((opcion_JUGADOR1.equals(PAPEL))&&(opcion_JUGADOR2.equals(PIEDRA)))
             {
             	EXITOS_jugador1 = ++p1.éxitos;
                 System.out.println("Jugador 1 GANA");
             }
-            else if((opcion_JUGADOR1.equals("piedra"))&&(opcion_JUGADOR2.equals("tijeras")))
+            else if((opcion_JUGADOR1.equals(PIEDRA))&&(opcion_JUGADOR2.equals("tijeras")))
             {
             	EXITOS_jugador1 = ++p1.éxitos;
                 System.out.println("Jugador 1 GANA");
@@ -52,12 +53,12 @@ public class Juego
             	EXITOS_jugador2 = ++p2.éxitos;
                 System.out.println("Jugador 2 GANA");
             }
-            else if((opcion_JUGADOR1.equals("tijeras"))&&(opcion_JUGADOR2.equals("papel")))
+            else if((opcion_JUGADOR1.equals("tijeras"))&&(opcion_JUGADOR2.equals(PAPEL)))
             {
             	EXITOS_jugador1 = ++p1.éxitos;
                 System.out.println("Jugador 1 GANA");
             }
-            else if((opcion_JUGADOR1.equals("papel"))&&(opcion_JUGADOR2.equals("tijeras")))
+            else if((opcion_JUGADOR1.equals(PAPEL))&&(opcion_JUGADOR2.equals("tijeras")))
             {
             	EXITOS_jugador2 = ++p2.éxitos;
                 System.out.println("Jugador 2 GANA");
@@ -83,6 +84,7 @@ public class Juego
 class Jugador{
 
     public static final String PIEDRA = "piedra";
+    public static final String PAPEL = "papel";
 
     /**
      * Escoge piedra, papel o tijera al azar
@@ -96,7 +98,7 @@ class Jugador{
             	opcion= PIEDRA;
                 break;
             case 1:
-            	opcion=("papel");
+            	opcion= PAPEL;
                 break;
             case 2:
             	opcion=("tijeras");
