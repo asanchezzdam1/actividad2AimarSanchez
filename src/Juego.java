@@ -17,7 +17,7 @@ public class Juego
         Integer EXITOS_jugador2=p2.éxitos;
         Integer EmPaTeS = 0;
         String opcion_JUGADOR1, opcion_JUGADOR2;
-        
+
         // Bucle de juego
         do
         {
@@ -27,12 +27,12 @@ public class Juego
             System.out.println("Jugador 1: " + opcion_JUGADOR1+"\t Jugador 1 - Partidas ganadas: " + EXITOS_jugador1);
             opcion_JUGADOR2 = p2.opcion_al_azar();
             System.out.println("Jugador 2: " + opcion_JUGADOR2+"\t Jugador 2 - Partidas ganadas: " + EXITOS_jugador2);
-            
+
             if((opcion_JUGADOR1.equals("piedra"))&&(opcion_JUGADOR2.equals("papel")))
             {
                 System.out.println("Jugador 2 GANA");
                 EXITOS_jugador2 = ++p2.éxitos;
-                
+
             }
             else if((opcion_JUGADOR1.equals("papel"))&&(opcion_JUGADOR2.equals("piedra")))
             {
@@ -108,5 +108,4 @@ class Jugador{
     }
     
     int éxitos;      // número de partidas ganadas
-    int winTotal;
 }
