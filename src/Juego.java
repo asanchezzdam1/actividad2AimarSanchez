@@ -18,7 +18,7 @@ public class Juego
         Jugador p2=new Jugador();
         boolean finDeJuego=false;
         Integer rondasJugadas = 0;    // Número de rondas jugadas
-        Integer EXITOS_jugador1=p1.éxitos;
+        Integer exitosJugador1=p1.éxitos;
         Integer EXITOS_jugador2=p2.éxitos;
         Integer EmPaTeS = 0;
         String opcion_JUGADOR1, opcion_JUGADOR2;
@@ -29,7 +29,7 @@ public class Juego
             System.out.println("***** Ronda: " + rondasJugadas+" *********************\n");
             System.out.println("Numero de empates: "+ EmPaTeS + "\n");
             opcion_JUGADOR1=p1.opcion_al_azar();
-            System.out.println("Jugador 1: " + opcion_JUGADOR1+"\t Jugador 1 - Partidas ganadas: " + EXITOS_jugador1);
+            System.out.println("Jugador 1: " + opcion_JUGADOR1+"\t Jugador 1 - Partidas ganadas: " + exitosJugador1);
             opcion_JUGADOR2 = p2.opcion_al_azar();
             System.out.println("Jugador 2: " + opcion_JUGADOR2+"\t Jugador 2 - Partidas ganadas: " + EXITOS_jugador2);
             
@@ -41,12 +41,12 @@ public class Juego
             }
             else if((opcion_JUGADOR1.equals(PAPEL))&&(opcion_JUGADOR2.equals(PIEDRA)))
             {
-            	EXITOS_jugador1 = ++p1.éxitos;
+            	exitosJugador1 = ++p1.éxitos;
                 System.out.println("Jugador 1 GANA");
             }
             else if((opcion_JUGADOR1.equals(PIEDRA))&&(opcion_JUGADOR2.equals(TIJERAS)))
             {
-            	EXITOS_jugador1 = ++p1.éxitos;
+            	exitosJugador1 = ++p1.éxitos;
                 System.out.println("Jugador 1 GANA");
             }
             else if((opcion_JUGADOR1.equals(TIJERAS))&&(opcion_JUGADOR2.equals(PIEDRA)))
@@ -56,7 +56,7 @@ public class Juego
             }
             else if((opcion_JUGADOR1.equals(TIJERAS))&&(opcion_JUGADOR2.equals(PAPEL)))
             {
-            	EXITOS_jugador1 = ++p1.éxitos;
+            	exitosJugador1 = ++p1.éxitos;
                 System.out.println("Jugador 1 GANA");
             }
             else if((opcion_JUGADOR1.equals(PAPEL))&&(opcion_JUGADOR2.equals(TIJERAS)))
